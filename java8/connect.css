@@ -1,0 +1,113 @@
+/* Reset & Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+  
+  html, body {
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(to right, #ffe6f2, #f9ccff);
+    color: #333;
+    padding: 20px;
+  }
+  
+  /* Contact Info Box */
+  .connect.info {
+    background: linear-gradient(to right, #f06292, #ba68c8);
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 20px;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    animation: slideDown 0.8s ease;
+  }
+  
+  /* Contact Info Paragraphs */
+  .connect.info p {
+    margin-bottom: 10px;
+  }
+  
+  /* Form Styling */
+  form.feedback {
+    background-color: white;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    border-radius: 20px;
+    border: 2px solid #ff99cc;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    animation: fadeInUp 1s ease;
+  }
+  
+  /* Labels */
+  form.feedback label {
+    display: block;
+    margin: 12px 0 6px;
+    font-weight: bold;
+    color: #d81b60;
+    font-size: 16px;
+  }
+  
+  /* Inputs & Textarea */
+  form.feedback input,
+  form.feedback textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 10px;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px;
+  }
+  
+  form.feedback input:focus,
+  form.feedback textarea:focus {
+    border-color: #f06292;
+  }
+  
+  /* Submit Button */
+  form.feedback button {
+    background: linear-gradient(to right, #ec407a, #ab47bc);
+    color: white;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  form.feedback button:hover {
+    background: linear-gradient(to right, #f06292, #ba68c8);
+    transform: scale(1.05);
+  }
+  
+  /* Animations */
+  @keyframes fadeInUp {
+    from {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes slideDown {
+    from {
+      transform: translateY(-30px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  

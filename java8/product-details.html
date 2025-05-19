@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Details</title>
+    <link rel="stylesheet" href="product-details.css" />
+  </head>
+  <body>
+    <div class="product-details"></div>
+    <script>
+      const productDetailsContainer = document.querySelector(".product-details");
+
+     
+      const queryParams = new URLSearchParams(window.location.search);
+      const productId = queryParams.get("id");
+
+     
+      const renderProductDetails = (data) => {
+        const html = `
+          <h1>${data.title}</h1>
+          <p>${data.description}</p>
+          <p>Price: $${data.price}</p>
+          <img src="${data.image}" alt="${data.title}" style="max-width: 300px; border-radius: 10px;"/>
+          <button class="add-to-cart">Add to Cart</button>
+        `;
+        productDetailsContainer.innerHTML = html;
+
+       
+        const addToCartButton = document.querySelector(".add-to-cart");
+        addToCartButton.addEventListener("click", () => {
+          alert(` product with id: ${data.id} has been added to your cart!`);
+        });
+      };
+
+      
+      const getProductDetails = async (id) => {
+        try {
+          const response = await fetch(`https://fakestoreapi.com/products/${id}`);
+          if (!response.ok) throw new Error("Failed to fetch product details");
+
+          const data = await response.json();
+          console.log(data)
+
+          renderProductDetails(data);
+        } catch (error) {
+          console.error("Error fetching product details:", error);
+          productDetailsContainer.innerHTML = "<p>Failed to load product details. Please try again later.</p>";
+        }
+      };
+
+      
+      if (productId) {
+        getProductDetails(productId);
+      } else {
+        productDetailsContainer.innerHTML = "<p>No product found.</p>";
+      }
+    </script>
+  </body>
+</html>

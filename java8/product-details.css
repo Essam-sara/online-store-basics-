@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  height: 100vh;
+}
+body {
+  font-family: 'Comic Sans MS';
+  background-color: #ffe6f2; 
+  color: #333;
+  padding: 20px;
+  text-align: center;
+}
+
+.product-details {
+ 
+  background: #fff; 
+  padding: 15px;
+  margin: auto;
+  max-width: 600px;
+  border-radius: 20px; 
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); 
+  border: 2px solid #ff99cc; 
+}
+
+h1 {
+  color: #ff6699; 
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+  color: #000000; 
+}
+
+img {
+  max-width: 50%;
+  height: auto;
+  border-radius: 15px; 
+  margin: 20px 0;
+}
+
+button {
+  background-color: #e54f9a; 
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 20px; 
+  cursor: pointer;
+ }
+
+
+
